@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bqu-dr-o1D">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2Mb-uV-K1T">
+            <objects>
+                <navigationController id="bqu-dr-o1D" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="As1-sw-PG7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dfp-ot-UJ8" kind="relationship" relationship="rootViewController" id="6my-Bc-yON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTb-e0-x6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="399.49333333333334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1EQ-g6-gbK">
+            <objects>
+                <viewController id="dfp-ot-UJ8" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GGo-Fx-PFm"/>
+                        <viewControllerLayoutGuide type="bottom" id="jMJ-iV-hOf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SbN-xl-iUV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zx-DV-4ES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dfp-ot-UJ8" id="65X-Pd-5z0"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7zx-DV-4ES" firstAttribute="top" secondItem="GGo-Fx-PFm" secondAttribute="bottom" constant="-64" id="4Em-nc-UHv"/>
+                            <constraint firstItem="7zx-DV-4ES" firstAttribute="leading" secondItem="SbN-xl-iUV" secondAttribute="leading" id="T47-hT-FSJ"/>
+                            <constraint firstItem="jMJ-iV-hOf" firstAttribute="top" secondItem="7zx-DV-4ES" secondAttribute="bottom" id="npA-yL-uPQ"/>
+                            <constraint firstAttribute="trailing" secondItem="7zx-DV-4ES" secondAttribute="trailing" id="xRa-bO-Lca"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wR0-lT-kDb"/>
+                    <connections>
+                        <outlet property="webViewContent" destination="7zx-DV-4ES" id="6Ue-rw-NvI"/>
+                        <segue destination="fvx-TZ-j4M" kind="push" identifier="segueShowPDF" id="CtK-hO-u1j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwc-jz-iJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="399"/>
+        </scene>
+        <!--ShowPDF View Controller-->
+        <scene sceneID="8XV-gY-dg7">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fvx-TZ-j4M" customClass="ShowPDFViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhy-B3-jFD"/>
+                        <viewControllerLayoutGuide type="bottom" id="VdF-hs-V5x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RsZ-9o-Rt6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4Z-9d-59n">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fvx-TZ-j4M" id="bw4-v2-dP0"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pjq-aa-Ypv">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4Z-9d-59n" firstAttribute="leading" secondItem="RsZ-9o-Rt6" secondAttribute="leading" id="0XW-4i-uTD"/>
+                            <constraint firstAttribute="trailing" secondItem="m4Z-9d-59n" secondAttribute="trailing" id="Dvc-eh-PP1"/>
+                            <constraint firstItem="VdF-hs-V5x" firstAttribute="top" secondItem="m4Z-9d-59n" secondAttribute="bottom" id="MTw-Rg-FVq"/>
+                            <constraint firstItem="m4Z-9d-59n" firstAttribute="top" secondItem="rhy-B3-jFD" secondAttribute="bottom" constant="-64" id="SlE-cZ-3K4"/>
+                            <constraint firstAttribute="centerX" secondItem="pjq-aa-Ypv" secondAttribute="centerX" id="Y1E-9S-fnh"/>
+                            <constraint firstAttribute="centerY" secondItem="pjq-aa-Ypv" secondAttribute="centerY" id="rxz-8E-heI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XTf-PM-x4B"/>
+                    <connections>
+                        <outlet property="activityLoad" destination="pjq-aa-Ypv" id="UZe-gr-y66"/>
+                        <outlet property="webViewShowPDF" destination="m4Z-9d-59n" id="OaJ-8A-HI2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8i1-zj-RLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="399"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

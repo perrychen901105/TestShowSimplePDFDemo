@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0AE78D1B1CAC8B00C8CC52 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C0AE78C1B1CAC8B00C8CC52 /* index.html */; };
 		2CD26A231B1B2940004DAEFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD26A221B1B2940004DAEFA /* main.m */; };
 		2CD26A261B1B2940004DAEFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD26A251B1B2940004DAEFA /* AppDelegate.m */; };
 		2CD26A291B1B2940004DAEFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD26A281B1B2940004DAEFA /* ViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0AE78C1B1CAC8B00C8CC52 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2CD26A1D1B1B2940004DAEFA /* TestPDFDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPDFDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD26A211B1B2940004DAEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CD26A221B1B2940004DAEFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		2CD26A1F1B1B2940004DAEFA /* TestPDFDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2C0AE78C1B1CAC8B00C8CC52 /* index.html */,
 				2CD26A241B1B2940004DAEFA /* AppDelegate.h */,
 				2CD26A251B1B2940004DAEFA /* AppDelegate.m */,
 				2CD26A271B1B2940004DAEFA /* ViewController.h */,
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD26A2C1B1B2940004DAEFA /* Main.storyboard in Resources */,
+				2C0AE78D1B1CAC8B00C8CC52 /* index.html in Resources */,
 				2CD26A311B1B2940004DAEFA /* LaunchScreen.xib in Resources */,
 				2CD26A2E1B1B2940004DAEFA /* Images.xcassets in Resources */,
 			);

@@ -19,7 +19,15 @@
     [super viewDidLoad];
     
     
-    NSURL *targetURL = [NSURL URLWithString:@"http://m.earthwerks.com/"];
+//    NSURL *targetURL = [NSURL URLWithString:@"http://m.earthwerks.com/"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+//    [self.webViewContent loadRequest:request];
+//    
+    
+    
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSURL *targetURL = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
     [self.webViewContent loadRequest:request];
 

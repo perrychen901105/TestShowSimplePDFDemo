@@ -19,17 +19,16 @@
     [super viewDidLoad];
     
     
-//    NSURL *targetURL = [NSURL URLWithString:@"http://m.earthwerks.com/"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-//    [self.webViewContent loadRequest:request];
-//    
-    
-    
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    NSURL *targetURL = [NSURL fileURLWithPath:path];
+    NSURL *targetURL = [NSURL URLWithString:@"http://m.earthwerks.com/"];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
     [self.webViewContent loadRequest:request];
+    
+    
+    
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+//    NSURL *targetURL = [NSURL fileURLWithPath:path];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+//    [self.webViewContent loadRequest:request];
 
     
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.earthwerks.com//media/Rapid-AccuClic_Install_Long.pdf"]];
@@ -46,9 +45,9 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if ([request.URL.relativeString hasSuffix:@".pdf"]) {
-        NSLog(@"the request is %@",request.URL.relativeString);
         self.strPDFlink = request.URL.relativeString;
-        [self performSegueWithIdentifier:@"segueShowPDF" sender:nil];
+//        [self performSegueWithIdentifier:@"segueShowPDF" sender:nil];
+        [[UIApplication sharedApplication] openURL:request.URL];
         return NO;
     }
     

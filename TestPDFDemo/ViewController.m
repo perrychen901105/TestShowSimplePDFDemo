@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ShowPDFViewController.h"
 @interface ViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webViewContent;
 @property (nonatomic, strong) NSString *strPDFlink;
@@ -54,12 +53,6 @@
     return YES;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"segueShowPDF"]) {
-        ShowPDFViewController *vcShowPDF = segue.destinationViewController;
-        vcShowPDF.strPDFlink = self.strPDFlink;
-    }
-}
+
 
 @end
